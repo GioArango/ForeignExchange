@@ -1,0 +1,60 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="ForeignExchageMVVM.Views.MainPage"
+             BindingContext="{Binding Main, Source={StaticResource Locator}}">
+    <ContentPage.Content>
+        <StackLayout
+        Padding="10,30,10,10">
+            <Label
+           HorizontalOptions="Center"
+           FontSize="Large"
+           Text = "ForeignExcange">
+            </Label>
+            <Label
+           Text = "Pesos: ">
+            </Label>
+            <Entry
+            Text="{Binding Pesos, Mode=TwoWay}"
+            Keyboard="Numeric"
+            PlaceholderColor="Black"
+            Placeholder="Enter the amount in pesos...">
+            </Entry>
+            <Label
+            Text = "Dollars: ">
+            </Label>
+            <Entry
+            Text="{Binding Dollars, Mode=TwoWay}"
+            IsEnabled="False"
+            PlaceholderColor="Black"
+            Placeholder="Value in Dollars...">
+            </Entry>
+            <Label
+            Text = "Euros: ">
+            </Label>
+            <Entry
+            Text="{Binding Euros, Mode=TwoWay}"
+            IsEnabled="False"
+            PlaceholderColor="Black"
+            Placeholder="Value in Euros...">
+            </Entry>
+            <Label
+            Text = "Pounds: ">
+            </Label>
+            <Entry
+            Text="{Binding Pounds, Mode=TwoWay}"
+            IsEnabled="False"
+            PlaceholderColor="Black"
+            Placeholder="Value in Pounds...">
+            </Entry>
+            <Button
+            Command="{Binding ConvertCommand}"
+            Text="Convert">
+            </Button>
+            <Button
+            Command="{Binding ClearCommand}"
+            Text="Clear">
+            </Button>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

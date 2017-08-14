@@ -1,0 +1,64 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="ForeignExchageMVVM.Views.ForeignExhangedPage"
+             BindingContext="{Binding Main, Source={StaticResource Locator}}">
+    <ContentPage.Content>
+        <StackLayout
+            Padding="20,30,20,10">
+            <Label
+                HorizontalOptions="Center"
+                FontSize="Large"
+                Text="Foreign Exchange">                
+            </Label>
+            <StackLayout
+                Orientation="Horizontal">
+                <Label
+                    Text="Amount:"
+                    HorizontalOptions="FillAndExpand"
+                    VerticalOptions="Center"
+                    WidthRequest="200">                    
+                </Label>
+                <Entry
+                    HorizontalOptions="FillAndExpand"
+                    Placeholder="Enter amount...">                    
+                </Entry>
+            </StackLayout>
+            <StackLayout
+                Orientation="Horizontal">
+                <Label
+                    Text="Source Rate:"
+                    VerticalOptions="Center"
+                    WidthRequest="200">
+                </Label>
+                <Picker
+                    HorizontalOptions="FillAndExpand"
+                    VerticalOptions="Center"
+                    Title="Select source rate...">                    
+                </Picker>
+            </StackLayout>
+            <StackLayout
+                Orientation="Horizontal">
+                <Label
+                    Text="Target Rate:"
+                    VerticalOptions="Center"
+                    WidthRequest="200">
+                </Label>
+                <Picker
+                    HorizontalOptions="FillAndExpand"
+                    Title="Select target rate...">
+                </Picker>
+            </StackLayout>
+            <Button
+                Margin="30,10,30,10"
+                BackgroundColor="Navy"
+                BorderRadius="23"
+                FontAttributes="Bold"
+                Text="Convert"
+                TextColor="White">                
+            </Button>
+            <ActivityIndicator>                
+            </ActivityIndicator>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
